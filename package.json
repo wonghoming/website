@@ -1,0 +1,27 @@
+{
+  "name": "website",
+  "version": "1.0.0",
+  "description": "website for domain: alexhomingwong.co.uk",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wonghoming/website.git"
+  },
+  "author": "wonghoming",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wonghoming/website/issues"
+  },
+  "homepage": "https://github.com/wonghoming/website#readme",
+  "dependencies": {
+    "next": "^5.1.0",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2"
+  }
+}
