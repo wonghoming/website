@@ -4,10 +4,11 @@
   "description": "website for domain: alexhomingwong.co.uk",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "cross-env NODE_ENV=development node server.js",
     "build": "next build",
-    "start": "node server.js -p $PORT"
+    "start": "node server.js -p $PORT",
+    "heroku-postbuild": "npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1",
   },
   "repository": {
     "type": "git",
