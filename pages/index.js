@@ -26,6 +26,9 @@ export default () => (
           margin: 0;
           font-family: lato, sans-serif;
         }
+        .invisible + .typed-cursor {
+          visibility: hidden;
+        }
       `}
     </style>
   </div>
