@@ -10,8 +10,8 @@ class TypedTextAnimation extends React.Component {
   removeCursor() {
     const { cursorLinger, cursorId } = this.props
     setTimeout(function() {
-      document.querySelectorAll('.typed-cursor')[cursorId].style.display =
-        'none'
+      document.querySelectorAll('.typed-cursor')[cursorId].style.visibility =
+        'hidden'
     }, cursorLinger)
   }
   delayRender() {
@@ -28,7 +28,6 @@ class TypedTextAnimation extends React.Component {
     const {
       strings,
       typeSpeed,
-      cursorChar,
       startDelay,
       removeCursor,
     } = this.props
@@ -36,7 +35,7 @@ class TypedTextAnimation extends React.Component {
     const options = {
       strings,
       typeSpeed: 70,
-      cursorChar,
+      cursorChar: '_',
       autoInsertCss: true,
       startDelay,
       onComplete: removeCursor ? this.removeCursor : function() {},
@@ -44,7 +43,6 @@ class TypedTextAnimation extends React.Component {
     this.typed = new Typed(this.el, options)
   }
   render() {
-    console.log()
     return (
       <span className={this.state.hidden} ref={el => (this.el = el)}>
         <style jsx>

@@ -1,19 +1,36 @@
 import React from 'react'
 import TypedTextAnimation from './TypedTextAnimation'
+import anime from 'animejs'
 
 class LandingMessage extends React.Component {
+  componentDidMount() {
+    const line = anime({
+      targets: '.messageWrapper hr',
+      width: '+=70px',
+      opacity: 1,
+      delay: 3500,
+    })
+
+    const info = anime({
+      targets: '.messageWrapper p',
+      opacity: 1,
+      translateY: '-=20',
+      ease: 'linear',
+      delay: 10000,
+    })
+  }
   render() {
     return (
       <div className="messageWrapper">
         <h3>
           <TypedTextAnimation
             strings={['Alex H. M. Wong']}
-            cursorChar="_"
             removeCursor="true"
             test="hello"
-            cursorLinger="1600"
+            cursorLinger="800"
             cursorId="0"
-            delayRender="0"
+            delayRender="1000"
+            startDelay="1000"
           />
         </h3>
         <hr />
@@ -21,12 +38,11 @@ class LandingMessage extends React.Component {
         <h2>
           <TypedTextAnimation
             strings={['A Freelance']}
-            cursorChar="_"
             removeCursor="true"
-            startDelay="4000"
+            startDelay="5000"
             cursorLinger="200"
             cursorId="1"
-            delayRender="3500"
+            delayRender="4500"
           />
         </h2>
         <h1>
@@ -34,9 +50,8 @@ class LandingMessage extends React.Component {
             strings={[
               "<span class='blue'>Web Developer</span><br />	&amp; <span class='red'>Designer</span>",
             ]}
-            cursorChar="_"
-            startDelay="5500"
-            delayRender="5200"
+            startDelay="6300"
+            delayRender="6300"
           />
         </h1>
         <h1 />
@@ -57,7 +72,8 @@ class LandingMessage extends React.Component {
             letter-spacing: 0.12rem;
           }
           div.messageWrapper hr {
-            width: 10%;
+            width: 0px;
+            opacity: 0;
             margin-bottom: 20px;
           }
           div.messageWrapper h2 {
@@ -84,6 +100,8 @@ class LandingMessage extends React.Component {
             color: #d1314d;
           }
           div.messageWrapper p {
+            opacity: 0;
+            margin-top: 50px;
             color: #ffffff;
             letter-spacing: 0.1rem;
             text-transform: uppercase;
