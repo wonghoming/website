@@ -56,7 +56,7 @@ class TypedTextAnimation extends React.Component {
           .typed-cursor {
             color: #ffffff;
             animation-name: flashing;
-            animation-duration: 0.8s;
+            animation-duration: 1s;
             animation-timing-function: ease-in;
             animation-iteration-count: infinite;
           }

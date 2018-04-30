@@ -1,6 +1,10 @@
 import React from 'react'
-import TypedTextAnimation from './TypedTextAnimation'
 import anime from 'animejs'
+
+import TypedTextAnimation from './TypedTextAnimation'
+import NextButton from './NextButton'
+import {lightBlue, cherryRed} from '../shared/themeColours'
+
 
 class LandingMessage extends React.Component {
   componentDidMount() {
@@ -15,7 +19,6 @@ class LandingMessage extends React.Component {
       targets: '.messageWrapper p',
       opacity: 1,
       translateY: '-=20',
-      ease: 'linear',
       delay: 10000,
     })
   }
@@ -26,7 +29,6 @@ class LandingMessage extends React.Component {
           <TypedTextAnimation
             strings={['Alex H. M. Wong']}
             removeCursor="true"
-            test="hello"
             cursorLinger="800"
             cursorId="0"
             delayRender="1000"
@@ -54,11 +56,11 @@ class LandingMessage extends React.Component {
             delayRender="6300"
           />
         </h1>
-        <h1 />
-        <p>Find out more</p>
+        <NextButton />
         <style jsx global>{`
           div.messageWrapper {
             margin-left: 50px;
+            width:55%;
           }
           div.messageWrapper h1,
           div.messageWrapper h3 {
@@ -94,10 +96,10 @@ class LandingMessage extends React.Component {
             margin-bottom: 30px;
           }
           div.messageWrapper h1 span.blue {
-            color: #0b6eaa;
+            color: ${lightBlue};
           }
           div.messageWrapper h1 span.red {
-            color: #d1314d;
+            color: ${cherryRed};
           }
           div.messageWrapper p {
             opacity: 0;

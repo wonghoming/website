@@ -14,17 +14,19 @@ class MonkeyLogo extends React.Component {
     return (
       <div className="monkeyLogoWrapper">
         <img
-          src="../../static/monkeyLogoBlack-Animated.svg"
+          src="../../../static/monkeyLogoBlack-Animated.svg"
           alt="Monkey Head"
         />
         <style jsx>
           {`
             div.monkeyLogoWrapper {
-              width: 20%;
+              width: 50%;
               opacity: 0;
+              text-align: right;
             }
             div.monkeyLogoWrapper img {
-              width: 100%;
+              width: 45%;
+              max-width: 400px;
             }
           `}
         </style>
