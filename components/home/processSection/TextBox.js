@@ -35,6 +35,8 @@ export default props => {
             background-color: ${backgroundColor};
             width: 30%;
             padding: 50px 40px;
+            opacity: 0;
+            z-index: -1;
           }
           div.box h2 {
             text-transform: uppercase;

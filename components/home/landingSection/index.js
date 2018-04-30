@@ -3,11 +3,11 @@ import LandingMessage from './LandingMessage'
 import TypedTextAnimation from './TypedTextAnimation'
 import { mainBlue } from '../shared/themeColours'
 
-export default () => (
+export default (props) => (
   <section className="landing">
     <div className="blue-bg" />
     <MonkeyLogo />
-    <LandingMessage />
+    <LandingMessage onClick={props.onClick} />
     <style jsx>
       {`
         div.blue-bg {

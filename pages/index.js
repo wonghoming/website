@@ -35,7 +35,7 @@ export default () => (
         .container {
           width: 1440px;
           margin: 0 auto;
-          padding: 80px 0 0 ;
+          padding: 100px 0 0 ;
           text-align: center;
         }
       `}
