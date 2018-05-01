@@ -3,8 +3,7 @@ import anime from 'animejs'
 
 import TypedTextAnimation from './TypedTextAnimation'
 import NextButton from './NextButton'
-import {lightBlue, cherryRed} from '../shared/themeColours'
-
+import { lightBlue, cherryRed } from '../shared/themeColours'
 
 class LandingMessage extends React.Component {
   componentDidMount() {
@@ -56,11 +55,11 @@ class LandingMessage extends React.Component {
             delayRender="6300"
           />
         </h1>
-        <NextButton />
+        <NextButton onClick={this.props.onClick}/>
         <style jsx global>{`
           div.messageWrapper {
             margin-left: 50px;
-            width:55%;
+            width: 55%;
           }
           div.messageWrapper h1,
           div.messageWrapper h3 {
