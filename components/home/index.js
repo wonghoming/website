@@ -4,6 +4,7 @@ import anime from 'animejs'
 
 import LandingSection from './landingSection'
 import ProcessSection from './processSection'
+import GallerySection from './gallerySection'
 
 class Index extends React.Component {
   constructor(props) {
@@ -27,7 +28,8 @@ class Index extends React.Component {
           <title>Alex Ho Ming Wong</title>
         </Head>
         <LandingSection onClick={this.animateProcess} />
-        <ProcessSection animate={this.state.animateProcess}/>
+        <ProcessSection animate={this.state.animateProcess} />
+        <GallerySection />
       </section>
     )
   }

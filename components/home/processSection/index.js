@@ -12,7 +12,7 @@ export default props => {
         targets: '#title',
         opacity: 1,
         delay: 600,
-        easing: 'linear',
+        easing: 'easeInQuad',
         duration: 800,
       })
       .add({
