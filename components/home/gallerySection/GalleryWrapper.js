@@ -11,24 +11,28 @@ export default class SliderWrapper extends React.Component {
     }
     this.slideShow = this.slideShow.bind(this)
   }
-  slideShow() {
-    const slides = document.getElementById('slides').childNodes.length
-    this.setState({ currentIndex: this.state.currentIndex + 1 })
-    if (this.state.currentIndex >= slides) {
+  slideShow(newIndex) {
+    if (!newIndex) {
+      this.setState({ currentIndex: this.state.currentIndex + 1 })
+    } else {
+      this.setState({ currentIndex: newIndex.target.value })
+    }
+    if (this.state.currentIndex >= this.state.indicatorAmount) {
       this.setState({ currentIndex: 0 })
     }
   }
-  indicatorAmount() {
+  componentDidMount() {
     this.setState({
       indicatorAmount: document.getElementById('slides').childNodes.length,
     })
-  }
-  componentDidMount() {
-    this.indicatorAmount()
     this.interval = setInterval(this.slideShow, 5000)
   }
+  componentDidUpdate() {
+    clearInterval(this.interval)
+    this.interval = setInterval(this.slideShow, 5000)
+  }
+
   render() {
-    console.log('currrent', this.state.currentIndex)
     return (
       <div>
         <div className="carouselWrapper" id="carousel">
@@ -36,6 +40,7 @@ export default class SliderWrapper extends React.Component {
           <Indicators
             indicatorAmount={this.state.indicatorAmount}
             active={this.state.currentIndex}
+            onClick={this.slideShow}
           />
         </div>
         <style jsx>

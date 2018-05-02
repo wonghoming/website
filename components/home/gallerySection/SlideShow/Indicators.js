@@ -7,9 +7,16 @@ export default class Indicators extends React.Component {
     const indicators = []
     for (let i = 0; i < indicatorAmount; i++) {
       if (i === this.props.active) {
-        indicators.push(<li key={i} className="active" />)
+        indicators.push(
+          <li
+            key={i}
+            className="active"
+            onClick={this.props.onClick}
+            value={i}
+          />,
+        )
       } else {
-        indicators.push(<li key={i} />)
+        indicators.push(<li key={i} onClick={this.props.onClick} value={i} />)
       }
     }
     return indicators
@@ -20,10 +27,11 @@ export default class Indicators extends React.Component {
         {this.renderIndicators()}
         <style jsx>{`
           ul.indicators {
-            position: relative;
+            position: absolute;
+            bottom: 0;
             align-self: flex-end;
             width: 200px;
-            height: 100px;
+            list-style: none;
           }
         `}</style>
         <style jsx global>{`
@@ -33,6 +41,9 @@ export default class Indicators extends React.Component {
             width: 40px;
             margin: 0 0 10px;
             transition: 0.5s ease-out all;
+          }
+          ul.indicators li:hover {
+            cursor: pointer;
           }
           ul.indicators li.active {
             width: 70px;

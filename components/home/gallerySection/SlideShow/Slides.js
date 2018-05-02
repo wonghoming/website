@@ -27,18 +27,21 @@ export default class Slides extends React.Component {
   }
   render() {
     return (
-      <div id="slides">
+      <div id="slides" className="slides">
         {this.renderSlides()}
         <style jsx global>
           {`
-            div#slides img {
+            div.slides img {
               position: absolute;
+              left: 0;
               opacity: 0;
               width: 100%;
-              transition: ease-out all 1s; 
+              transition: ease-in all 1s;
             }
-            div#slides img.active {
+            div.slides img.active {
               opacity: 1;
+              width: 100%;
+              position: static;
             }
           `}
         </style>
