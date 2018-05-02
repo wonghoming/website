@@ -7,50 +7,36 @@ export default class SliderWrapper extends React.Component {
     super(props)
     this.state = {
       currentIndex: 0,
+      indicatorAmount: 0,
     }
-    this.changeIndex = this.changeIndex.bind(this)
+    this.slideShow = this.slideShow.bind(this)
   }
-  resetIndex(slides) {
-    if (this.state.currentIndex >= slides.length) {
+  slideShow() {
+    const slides = document.getElementById('slides').childNodes.length
+    this.setState({ currentIndex: this.state.currentIndex + 1 })
+    if (this.state.currentIndex >= slides) {
       this.setState({ currentIndex: 0 })
     }
   }
-  hideAll(slides) {
-    slides.forEach(slide => {
-      slide.style.opacity = '0'
+  indicatorAmount() {
+    this.setState({
+      indicatorAmount: document.getElementById('slides').childNodes.length,
     })
   }
-  showSlide(slides) {
-    slides[this.state.currentIndex].style.opacity = '1'
-  }
-
-  changeIndex() {
-    this.setState({ currentIndex: this.state.currentIndex + 1 })
-    this.slideShow()
-  }
-  slideShow() {
-    const slides = document.querySelectorAll('.slides')
-    console.log(slides[0].childNodes[0].clientHeight)
-    document.getElementById('carousel').style.height = `${
-      slides[0].clientHeight
-      // slides[0].childNodes[0].clientHeight
-    }px`
-    this.resetIndex(slides)
-    this.hideAll(slides)
-    this.showSlide(slides)
-    setTimeout(this.changeIndex, 3000)
-  }
   componentDidMount() {
-    this.slideShow()
+    this.indicatorAmount()
+    this.interval = setInterval(this.slideShow, 5000)
   }
   render() {
+    console.log('currrent', this.state.currentIndex)
     return (
       <div>
         <div className="carouselWrapper" id="carousel">
-          <Slides src="Helm.jpg" />
-          <Slides src="Spectrum.jpg" />
-          <Slides src="Ps21.jpg" />
-          <Indicators />
+          <Slides active={this.state.currentIndex} />
+          <Indicators
+            indicatorAmount={this.state.indicatorAmount}
+            active={this.state.currentIndex}
+          />
         </div>
         <style jsx>
           {`
