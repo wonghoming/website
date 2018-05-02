@@ -32,6 +32,7 @@ export default class Indicators extends React.Component {
             align-self: flex-end;
             width: 200px;
             list-style: none;
+            padding: 20px 0;
           }
         `}</style>
         <style jsx global>{`

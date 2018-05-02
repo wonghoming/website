@@ -12,13 +12,12 @@ export default class SliderWrapper extends React.Component {
     this.slideShow = this.slideShow.bind(this)
   }
   slideShow(newIndex) {
-    if (!newIndex) {
-      this.setState({ currentIndex: this.state.currentIndex + 1 })
-    } else {
+    if (newIndex) {
       this.setState({ currentIndex: newIndex.target.value })
-    }
-    if (this.state.currentIndex >= this.state.indicatorAmount) {
+    } else if (this.state.currentIndex === this.state.indicatorAmount - 1) {
       this.setState({ currentIndex: 0 })
+    } else if (!newIndex) {
+      this.setState({ currentIndex: this.state.currentIndex + 1 })
     }
   }
   componentDidMount() {
