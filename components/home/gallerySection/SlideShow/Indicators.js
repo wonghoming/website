@@ -1,5 +1,5 @@
 import React from 'react'
-import { lightBlue, mainBlue } from '../../shared/themeColours'
+import { lightBlue, mainBlue, cherryRed } from '../../shared/themeColours'
 
 export default class Indicators extends React.Component {
   renderIndicators() {
@@ -42,6 +42,9 @@ export default class Indicators extends React.Component {
             width: 40px;
             margin: 0 0 10px;
             transition: 0.5s ease-out all;
+          }
+          ul.indicators li:nth-child(even) {
+            background-color: ${cherryRed};
           }
           ul.indicators li:hover {
             cursor: pointer;

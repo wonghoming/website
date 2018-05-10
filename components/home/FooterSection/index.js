@@ -22,7 +22,7 @@ export default () => (
         div {
           background-color: ${mainBlue};
           color: #ffffff;
-          padding: 100px 0;
+          padding: 70px 0;
           text-align: center;
         }
         p {

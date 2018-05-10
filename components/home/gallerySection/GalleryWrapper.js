@@ -28,7 +28,7 @@ export default class SliderWrapper extends React.Component {
   }
   componentDidUpdate() {
     clearInterval(this.interval)
-    this.interval = setInterval(this.slideShow, 5000)
+    this.interval = setInterval(this.slideShow, 8000)
   }
 
   render() {
