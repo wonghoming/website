@@ -16,7 +16,7 @@ export default () => (
       {`
         section.gallery p {
           width: 80%;
-          margin: 0 auto 60px;
+          margin: 0 auto 100px;
         }
       `}
     </style>

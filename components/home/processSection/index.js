@@ -89,7 +89,7 @@ export default props => {
         div.sky {
           position: absolute;
           width: 100%;
-          height: 50vh;
+          height: 60vh;
           bottom: 0;
           z-index: -1;
           opacity: 0.4;
@@ -107,7 +107,7 @@ export default props => {
         }
         section.process p {
           width: 80%;
-          margin: 0 auto 60px;
+          margin: 0 auto 40px;
         }
         section.process div.box-container {
           display: flex;

@@ -7,7 +7,7 @@ export default [
   {
     src: '../../../../static/gallery/StCatherinesEDM.jpg',
     title: "St Catherine's Website and EDM",
-    description: 'This is a website to help promote',
+    description: 'This is a website to help promote ',
   },
   {
     src: '../../../../static/gallery/Spectrum.jpg',

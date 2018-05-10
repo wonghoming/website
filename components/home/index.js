@@ -5,6 +5,7 @@ import anime from 'animejs'
 import LandingSection from './landingSection'
 import ProcessSection from './processSection'
 import GallerySection from './gallerySection'
+import Footer from './FooterSection'
 
 class Index extends React.Component {
   constructor(props) {
@@ -20,6 +21,7 @@ class Index extends React.Component {
       easing: 'easeOutQuad',
     })
     this.setState({ animateProcess: true })
+    document.getElementsByTagName('body')[0].style.overflow = 'auto'
   }
   render() {
     return (
@@ -30,6 +32,7 @@ class Index extends React.Component {
         <LandingSection onClick={this.animateProcess} />
         <ProcessSection animate={this.state.animateProcess} />
         <GallerySection />
+        <Footer />
       </section>
     )
   }

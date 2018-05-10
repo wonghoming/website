@@ -47,6 +47,7 @@ export default class SliderWrapper extends React.Component {
             div.carouselWrapper {
               position: relative;
               display: flex;
+              overflow: hidden;
             }
           `}
         </style>

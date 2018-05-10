@@ -43,9 +43,11 @@ export default class Slides extends React.Component {
               color: #ffffff;
               text-transform: uppercase;
             }
+            div.slide {
+            }
             div.slides img {
               position: absolute;
-              left: 0;
+              display: block;
               opacity: 0;
               transition: ease-in all 1s;
               width: 100%;

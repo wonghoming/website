@@ -9,7 +9,7 @@ export default props => (
         h1 {
           font-size: 2rem;
           text-transform: uppercase;
-          color: ${mainBlue};
+          color: ${props.white ? '#ffffff' : mainBlue};
           margin-bottom: 20px;
         }
         h1 span {
