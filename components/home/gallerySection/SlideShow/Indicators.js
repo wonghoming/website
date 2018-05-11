@@ -21,9 +21,14 @@ export default class Indicators extends React.Component {
     }
     return indicators
   }
+  componentDidMount() {
+    if (window.innerWidth <= 1200) {
+      document.getElementById('indicators').style.display = 'none'
+    }
+  }
   render() {
     return (
-      <ul className="indicators">
+      <ul className="indicators" id="indicators">
         {this.renderIndicators()}
         <style jsx>{`
           ul.indicators {

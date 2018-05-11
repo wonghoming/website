@@ -2,14 +2,14 @@ import { mainBlue } from '../shared/themeColours'
 
 export default () => (
   <div>
-    <h4>Contact me</h4>
     <p>
-      If you like to contact me about any possible jobs or even just have a
-      query which you would like to discuss, please feel free to email me using
-      the address below.
-    </p>
-    <p className="email">
-      <a href="mailto:wonghoming.dev@gmail.com">wonghoming.dev@gmail.com</a>
+      Contact me via:{' '}
+      <a href="mailto:wonghoming.dev@gmail.com">
+        <img src="../../../static/icons/email.png" />
+      </a>
+      <a href="https://www.linkedin.com/in/alex-wong-8568bb93/">
+        <img src="../../../static/icons/linkedin.png" />
+      </a>
     </p>
     <style jsx>
       {`
@@ -22,22 +22,30 @@ export default () => (
         div {
           background-color: ${mainBlue};
           color: #ffffff;
-          padding: 70px 0;
-          text-align: center;
+          padding: 5px 30px;
+          text-align: right;
         }
         p {
-          margin-bottom: 20px;
+          font-size: 1rem;
+          font-weight: 300;
         }
-        p.email {
-          font-size: 1.4rem;
+        p img {
+          width: 20px;
+          vertical-align: middle;
+          margin: 0 5px;
         }
-        p.email a {
+        p a {
           text-decoration: none;
           color: #ffffff;
         }
-        p.email a:hover {
+        p a:hover {
           cursor: pointer;
           opacity: 0.8;
+        }
+        @media all and (min-width: 900px) {
+          p.email a {
+            color: red;
+          }
         }
       `}
     </style>

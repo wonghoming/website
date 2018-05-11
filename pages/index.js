@@ -24,9 +24,6 @@ export default class extends React.Component {
         <Home />
         <style jsx global>
           {`
-            body {
-              overflow: hidden;
-            }
             * {
               box-sizing: border-box;
               padding: 0;
@@ -34,17 +31,40 @@ export default class extends React.Component {
               font-family: lato, sans-serif;
             }
             p {
-              font-size: 1.1rem;
-              line-height: 1.6rem;
+              font-size: 1rem;
+              line-height: 1.4rem;
             }
             .invisible + .typed-cursor {
               visibility: hidden;
             }
             .container {
-              width: 1440px;
+              width: 100%;
               margin: 0 auto;
-              padding: 100px 0 0;
+              padding: 50px 10px 50px;
               text-align: center;
+            }
+            @media all and (min-width: 600px) {
+              .container {
+                padding: 60px 10px 60px;
+              }
+            }
+            @media all and (min-width: 900px) {
+              .container {
+                padding: 80px 10px 80px;
+              }
+            }
+            @media all and (min-width: 1200px) {
+              body {
+                overflow: hidden;
+              }
+              p {
+                font-size: 1.1rem;
+                line-height: 1.6rem;
+              }
+              .container {
+                max-width: 1440px;
+                padding: 100px 0 0;
+              }
             }
           `}
         </style>

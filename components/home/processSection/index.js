@@ -11,7 +11,7 @@ export default props => {
       .add({
         targets: '#title',
         opacity: 1,
-        delay: 600,
+        delay: 300,
         easing: 'easeInQuad',
         duration: 800,
       })
@@ -53,43 +53,51 @@ export default props => {
         <div className="invisible slideDown" id="title">
           <Title text="The Process is a " append="Journey" />
           <p>
-            Noste facchuidii seniqua notam menatas traris, Cuppliam etis revid
-            faus sat, sediend ientiquit in Itatium am immoena, dees conum nonte
-            des, nos pondetre pos rem viur actabus perehem prit; hos. Noste
-            facchuidii seniqua notam menatas traris, Cuppliam etis revid faus
-            sat, sediend ientiquit in Itatium am immoena.
+            No two projects are the same, which is why I like to work closely
+            with the clients to help them realise the vision they have for their
+            product. With my experience and expertise in design, I can make sure
+            that your product will stand out from comeptitors. To create
+            something perfect takes time and effort, and nothing worth having
+            comes cheap or quick. To guide my clients along the journey, I tend
+            to follow the below steps:
           </p>
         </div>
         <div className="box-container">
           <TextBox
             title="embark"
-            tagline="Discussion & Ideas"
-            text="Noste facchuidii seniqua notam menatas traris, sediend ientiquit in Itatium am immoena, dees conum nonte des."
-            backgroundColor="grey"
-          />
+            tagline="Lake of Ideas"
+            backgroundColor="grey">
+            The first step is to discuss the vision for the project. When there
+            is a goal in mind, the myriad of decisions become a lot clearer and
+            helps make sure the project stays on track.
+          </TextBox>
           <TextBox
             title="exploration"
-            tagline="Creativity Together"
-            text="Noste facchuidii seniqua notam menatas traris, Cuppliam etis revid faus sat, sediend ientiquit in Itatium am immoena, dees conum nonte desdees conum nonte des."
-            backgroundColor="red"
-          />
+            tagline="Jungle of Creativity"
+            backgroundColor="red">
+            From our discussion, I will show you designs that best suite your
+            product. Exploring different designs will also help focus your
+            product in the right direction.
+          </TextBox>
           <TextBox
             title="arrival"
-            tagline="Constructing the Product"
-            text="Noste facchuidii seniqua notam menatas traris, perehem prit; hos. Noste facchuidii seniqua notam menatas traris, Cuppliam etis revid faus sat, sediend ientiquit in Itatium am immoena, dees conum nonte des."
-            backgroundColor="blue"
-          />
+            tagline="Realising the Product"
+            backgroundColor="blue">
+            Using the technology that best match your requirements, whether that
+            be CMS sites, web apps or EDMs; I will make sure you
+            will have a product that will please and amaze you.
+          </TextBox>
         </div>
       </div>
       <style jsx>{`
         section.process {
-          height: 100vh;
           width: 100%;
+          position: relative;
         }
         div.sky {
           position: absolute;
           width: 100%;
-          height: 60vh;
+          height: 40vh;
           bottom: 0;
           z-index: -1;
           opacity: 0.4;
@@ -111,6 +119,7 @@ export default props => {
         }
         section.process div.box-container {
           display: flex;
+          flex-wrap: wrap;
           justify-content: space-around;
           padding-top: 50px;
         }
@@ -118,7 +127,13 @@ export default props => {
           opacity: 0;
           z-index: -20;
         }
-        section.process .invisible.slideDown {
+        @media all and (min-width: 1200px) {
+          section.process {
+            height: 100vh;
+          }
+          div.sky {
+            height: 60vh;
+          }
         }
       `}</style>
     </section>
