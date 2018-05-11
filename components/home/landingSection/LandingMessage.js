@@ -20,6 +20,7 @@ class LandingMessage extends React.Component {
       translateY: '-=20',
       delay: 10000,
     })
+      
   }
   render() {
     return (

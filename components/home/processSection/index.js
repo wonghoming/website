@@ -55,11 +55,8 @@ export default props => {
           <p>
             No two projects are the same, which is why I like to work closely
             with the clients to help them realise the vision they have for their
-            product. With my experience and expertise in design, I can make sure
-            that your product will stand out from comeptitors. To create
-            something perfect takes time and effort, and nothing worth having
-            comes cheap or quick. To guide my clients along the journey, I tend
-            to follow the below steps:
+            product. To create something perfect takes time and effort, and
+            nothing worth having comes cheap or quick.
           </p>
         </div>
         <div className="box-container">
@@ -75,17 +72,17 @@ export default props => {
             title="exploration"
             tagline="Jungle of Creativity"
             backgroundColor="red">
-            From our discussion, I will show you designs that best suite your
-            product. Exploring different designs will also help focus your
-            product in the right direction.
+            I will create designs that best suite your product. Exploring
+            different styles will help focus your product in the right
+            direction.
           </TextBox>
           <TextBox
             title="arrival"
             tagline="Realising the Product"
             backgroundColor="blue">
             Using the technology that best match your requirements, whether that
-            be CMS sites, web apps or EDMs; I will make sure you
-            will have a product that will please and amaze you.
+            be CMS sites, web apps or EDMs; I will make sure you will have a
+            product that will please and amaze you.
           </TextBox>
         </div>
       </div>
