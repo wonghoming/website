@@ -78,7 +78,7 @@ export default props => {
           </TextBox>
           <TextBox
             title="arrival"
-            tagline="Realising the Product"
+            tagline="Reaching the Summit"
             backgroundColor="blue">
             Using the technology that best match your requirements, whether that
             be CMS sites, web apps or EDMs; I will make sure you will have a
