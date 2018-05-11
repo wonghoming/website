@@ -20,8 +20,7 @@ export default class extends React.Component {
             href="https://fonts.googleapis.com/css?family=Lobster"
             rel="stylesheet"
           />
-          <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-          <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+          <link rel="icon" href="../favicon.ico" type="image/x-icon" />
         </Head>
         <Home />
         <style jsx global>
