@@ -3,7 +3,7 @@ import LandingMessage from './LandingMessage'
 import TypedTextAnimation from './TypedTextAnimation'
 import { mainBlue } from '../shared/themeColours'
 
-export default (props) => (
+export default props => (
   <section className="landing">
     <div className="blue-bg" />
     <MonkeyLogo />
@@ -21,13 +21,20 @@ export default (props) => (
         }
         section.landing {
           display: flex;
+          flex-wrap: wrap;
+          align-content: center;
+          justify-content: center;
           height: 100vh;
           width: 100%;
-          position: fixed;
-          top: 0;
           z-index: 2;
-          justify-content: center;
-          align-items: center;
+        }
+        @media all and (min-width: 1200px) {
+          section.landing {
+            position: fixed;
+            flex-wrap: nowrap;
+            top: 0;
+            align-items: center;
+          }
         }
       `}
     </style>
