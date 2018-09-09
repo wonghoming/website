@@ -3,7 +3,7 @@ import {
   lightBlue,
   cherryRed,
   darkRed,
-  grey,
+  grey
 } from '../shared/themeColours'
 
 export default props => {
@@ -25,6 +25,7 @@ export default props => {
   }
   return (
     <div className="box">
+      <div className="boxBg" />
       <h2>{props.title}</h2>
       <h3>{props.tagline}</h3>
       <hr />
@@ -32,12 +33,20 @@ export default props => {
       <style jsx>
         {`
           div.box {
-            background-color: ${backgroundColor};
             width: 100%;
             padding: 30px 20px;
             margin-bottom: 10px;
             opacity: 0;
-            z-index: -1;
+            position: relative;
+          }
+          div.box div.boxBg {
+            background-color: ${backgroundColor};
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            z-index: -10;
+            top: 0;
+            left: 0;
           }
           div.box h2 {
             text-transform: uppercase;
