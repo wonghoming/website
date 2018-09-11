@@ -69,7 +69,7 @@ export default props => {
           p {
             color: #58585a;
           }
-          @media all and (min-width: 600px) {
+          @media all and (min-width: 700px) {
             div.box {
               width: 30%;
               padding: 50px 20px;
