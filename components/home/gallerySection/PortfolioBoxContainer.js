@@ -76,7 +76,7 @@ export default () => {
           display: flex;
           flex-wrap: wrap;
           width: 100%;
-          justify-content: space-between;
+          justify-content: space-around;
           margin: 0 0 100px;
         }
         div.boxImage p {
